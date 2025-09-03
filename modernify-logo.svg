@@ -1,0 +1,18 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- gradient ciemny niebieski -> jaśniejszy niebieski -->
+    <linearGradient id="blueWin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- lewy górny -->
+  <rect x="30" y="30" width="120" height="120" rx="16" fill="url(#blueWin)"/>
+  <!-- prawy górny -->
+  <rect x="170" y="30" width="120" height="120" rx="16" fill="url(#blueWin)"/>
+  <!-- lewy dolny -->
+  <rect x="30" y="170" width="120" height="120" rx="16" fill="url(#blueWin)"/>
+  <!-- prawy dolny -->
+  <rect x="170" y="170" width="120" height="120" rx="16" fill="url(#blueWin)"/>
+</svg>
