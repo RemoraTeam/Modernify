@@ -1,0 +1,39 @@
+{
+  "name": "modernify",
+  "version": "1.0.0",
+  "description": "App that makes Windows 10 more modern",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "electron-rebuild",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-window-manager": "^2.2.4",
+    "robotjs": "^0.6.0"
+  },
+  "devDependencies": {
+    "electron": "^27.1.0",
+    "electron-builder": "^26.0.12",
+    "electron-rebuild": "^3.2.9"
+  },
+  "build": {
+    "appId": "com.modernify.app",
+    "productName": "Modernify",
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "directories": {
+      "buildResources": "frontend"
+    },
+    "extraResources": [
+      "UltraUXThemePatcher_4.4.4.exe",
+      "afterrestart.exe"
+    ]
+  }
+}

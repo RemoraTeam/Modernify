@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Modernify</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Modernify</h2>
+  <pre id="log"></pre>
+  <script>
+    const statusMsg = document.getElementById('statusMsg');
+    const log = document.getElementById('log');
+    // *** AUTOMATYCZNY START ***
+    (async () => {
+      log.textContent = '';
+      await window.modernify.runAutomation();
+      statusMsg.textContent = 'Gotowe!';
+    })();
+    window.modernify.onLog(msg => {
+      log.textContent += msg;
+      log.scrollTop = log.scrollHeight;
+    });
+  </script>
+</body>
+
+</html>

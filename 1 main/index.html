@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Mordenify</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Modernify</h2>
+  <div id="status">Status: <span id="statusMsg">Czeka na uruchomienie...</span></div>
+  <button id="runBtn">Uruchom</button>
+  <pre id="log"></pre>
+  <script>
+    const statusMsg = document.getElementById('statusMsg');
+    const runBtn = document.getElementById('runBtn');
+    const log = document.getElementById('log');
+    runBtn.onclick = async () => {
+      statusMsg.textContent = 'Trwa instalowanie...';
+      log.textContent = '';
+      await window.mordenify.runAutomation();
+      statusMsg.textContent = 'Gotowe!';
+    };
+    window.mordenify.onLog(msg => {
+      log.textContent += msg;
+      log.scrollTop = log.scrollHeight;
+    });
+  </script>
+</body>
+</html>
