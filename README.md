@@ -8,4 +8,4 @@ Aplikacja, która unowocześnia wygląd **Windowsa 10**
 ---
 
 ## Uwaga  
-Przed instalacją **koniecznie przeczytaj plik **README**, aby uniknąć problemów z konfiguracją.  
+Przed instalacją koniecznie przeczytaj plik **README**, aby uniknąć problemów z konfiguracją.  
